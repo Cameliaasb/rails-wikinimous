@@ -1,0 +1,19 @@
+<% @articles.each do |article|%>
+  <div class="text-center">
+    <%= link_to article_path(article) do  %>
+      <div class="text-decoration-none">
+        <%= article.title %>
+      </div>
+    <% end %>
+    <p> <%= article.content %> </p>
+  </div>
+<% end %>
+
+
+<div class="text-center">
+<%= link_to new_article_path do  %>
+  <div class="btn btn-primary rounded">
+    <%= "Create new article" %>
+  </div>
+<% end %>
+</div>
